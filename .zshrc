@@ -106,6 +106,7 @@ export XDG_SCREENSHOTS_DIR="~/Pictures/Screenshots/"
 export PATH=$PATH:/opt/nvim-linux64/bin
 export PATH=$PATH:/home/if-els/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/if-els/.config/kmonad
 export JAVA_HOME='/opt/jdk-21.0.3/'
 alias py='python'
 

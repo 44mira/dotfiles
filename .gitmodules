@@ -1,3 +1,6 @@
 [submodule ".config/tmux/plugins/catppucin-tmux"]
 	path = .config/tmux/plugins/catppucin-tmux
 	url = https://github.com/dreamsofcode-io/catppuccin-tmux
+[submodule ".config/kmonad"]
+	path = .config/kmonad
+	url = https://github.com/kmonad/kmonad
