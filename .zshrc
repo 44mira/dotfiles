@@ -119,5 +119,8 @@ alias zshconfig='nvim ~/.zshrc'
 alias ls='exa'
 alias ll='exa -l'
 
+# Fastfetch
+alias ff="fastfetch"
+
 # Clear screen for tmux
 bindkey "^[l" clear-screen
