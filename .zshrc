@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="kennethreitz"
+# ZSH_THEME="kennethreitz"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ ZSH_THEME="kennethreitz"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-autosuggestions)
+plugins=( git sudo )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +85,7 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -100,25 +100,34 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export XDG_SCREENSHOTS_DIR="~/Pictures/Screenshots/"
-export PATH=$PATH:/opt/nvim-linux64/bin
-export PATH=$PATH:/home/if-els/.cargo/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/if-els/.config/kmonad
-export JAVA_HOME='/opt/jdk-21.0.3/'
+# ASDF
+. /opt/asdf-vm/asdf.sh
+
+
+# Language binaries
+export PATH=$PATH:/home/if-els/.cargo/bin               # Rust (Cargo)
+export PATH=$PATH:/usr/local/go/bin                     # Golang
+export PATH=$PATH:/home/tyrael/.ghcup/ghc/9.4.8/bin     # Haskell (GHC)
 alias py='python'
 
 # Repetitive Command Sequences
 alias clrscs='rm ~/Pictures/Screenshots/*.png'
 alias srcvenv='source ./venv/bin/activate'
-alias zshconfig='nvim ~/.zshrc'
+alias zconf='nvim ~/.zshrc'
+alias zsrc='source ~/.zshrc'
+alias lg="lazygit"
+alias ff="fastfetch --disable-linewrap"
 
 # Colorful ls
 alias ls='exa'
 alias ll='exa -l'
 
-# Fastfetch
-alias ff="fastfetch"
-
 # Clear screen for tmux
 bindkey "^[l" clear-screen
+
+# zoxide
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+
+# Arch logo on startup
+# magick $HOME/.config/fastfetch/pngs/arch.png -resize 180% png:fd:1 | kitten icat --align=left 
