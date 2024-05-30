@@ -115,6 +115,7 @@ export EDITOR='nvim'
 export PATH=$PATH:/home/if-els/.cargo/bin               # Rust (Cargo)
 export PATH=$PATH:/usr/local/go/bin                     # Golang
 export PATH=$PATH:/home/tyrael/.ghcup/ghc/9.4.8/bin     # Haskell (GHC)
+export PATH=$PATH:/home/tyrael/Scripts
 alias py='python'
 
 # Repetitive Command Sequences
@@ -124,6 +125,7 @@ alias zconf='nvim ~/.zshrc'
 alias zsrc='source ~/.zshrc'
 alias lg="lazygit"
 alias ff="fastfetch --disable-linewrap"
+alias zz="z ~"
 
 # Colorful ls
 alias ls='exa'
