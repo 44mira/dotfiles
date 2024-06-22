@@ -109,9 +109,8 @@ export MANROFFOPT="-c"
 
 # Language binaries
 export PATH=$PATH:/home/if-els/.cargo/bin                   # Rust (Cargo)
-export PATH=$PATH:/usr/local/go/bin                         # Golang
 export PATH=$PATH:/home/tyrael/.ghcup/ghc/9.4.8/bin         # Haskell (GHC)
-export PATH=$PATH:/home/tyrael/.config/composer/vendor/bin  # Laravel
+# export PATH=$PATH:/home/tyrael/.config/composer/vendor/bin  # Laravel
 export PATH=$PATH:/home/tyrael/Scripts
 alias py='python'
 
