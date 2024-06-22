@@ -103,11 +103,15 @@ export EDITOR='nvim'
 # ASDF
 . /opt/asdf-vm/asdf.sh
 
+# bat as man
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 # Language binaries
-export PATH=$PATH:/home/if-els/.cargo/bin               # Rust (Cargo)
-export PATH=$PATH:/usr/local/go/bin                     # Golang
-export PATH=$PATH:/home/tyrael/.ghcup/ghc/9.4.8/bin     # Haskell (GHC)
+export PATH=$PATH:/home/if-els/.cargo/bin                   # Rust (Cargo)
+export PATH=$PATH:/usr/local/go/bin                         # Golang
+export PATH=$PATH:/home/tyrael/.ghcup/ghc/9.4.8/bin         # Haskell (GHC)
+export PATH=$PATH:/home/tyrael/.config/composer/vendor/bin  # Laravel
 export PATH=$PATH:/home/tyrael/Scripts
 alias py='python'
 
@@ -135,4 +139,4 @@ eval "$(zoxide init zsh)"
 # magick $HOME/.config/fastfetch/pngs/arch.png -resize 180% png:fd:1 | kitten icat --align=left 
 
 # Custom prompt using oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/omp-themes/velvet.omp.toml)"
+eval "$(oh-my-posh init zsh --config ~/omp-themes/velvet2.omp.toml)"
